@@ -45,7 +45,7 @@ before_install:
 install:
   - cpan-install --deps
   - cpan-install --coverage
-  - cpanm --installdeps --with-recommends --with-suggests --with-develop .
+  - cpanm --installdeps --with-recommends --with-suggests --with-develop . || cat ~/.cpanm/build.log
 before_script:
   - coverage-setup
 script:
