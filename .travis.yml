@@ -45,7 +45,7 @@ before_install:
 install:
   - cpan-install --deps
   - cpan-install --coverage
-  - cpan-install Test::Warnings # for some reason travis-perl started dropping this with the dev & blead perl
+  - cpanm --installdeps --with-recommends --with-suggests --with-develop .
 before_script:
   - coverage-setup
 script:
